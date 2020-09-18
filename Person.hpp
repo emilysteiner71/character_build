@@ -7,6 +7,7 @@ class Person {
     private:
         std::string name;
         int age;
+        int score;
     public:
         Person(const std::string &name, int age);
 };
