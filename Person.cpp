@@ -5,22 +5,31 @@ using namespace std;
 
 Person::Person(const std::string &name, int age) : name(name), age(age) {
     XP = 10;
-    illusionScore = 0;
-    conjurationScore = 0;
-    destructionScore = 0;
-    restorationScore = 0;
-    alterationScore = 0;
-    enchantingScore = 0;
-    smithingScore = 0;
-    heavyArmourScore = 0;
-    blockScore = 0;
-    twoHandedScore = 0;
-    oneHandedScore = 0;
-    archeryScore = 0;
-    lightArmourScore = 0;
-    sneakScore = 0;
-    lockpickingScore = 0;
-    pickpocketScore = 0;
-    speechScore = 0;
-    alchemyScore = 0;
+    Attributes = {"illusion", "conjuration", "destruction", "restoration", "alteration", "enchanting", "smithing", "heavyArmour", "block",
+    "twoHanded", "oneHanded", "archery", "lightArmour", "sneak", "lockpicking", "pickpocket", "speech", "alchemy"};
+    for (unsigned int i = 0; i < Attributes.size(); i++) {
+        Scores.push_back(0);
+    }
+}
+
+int Person::getAge() const{
+    return this->age;
+}
+
+std::string Person::getName() const {
+    return this->name;
+}
+
+int Person::getXP() const {
+    return this->XP;
+}
+
+bool Person::setScore(std::string &attribute, int newScore) {
+    for (unsigned int i = 0; i < Attributes.size(); i++) {
+        if (attribute == Attributes[i]) {
+            Scores[i] = newScore;
+            return true;
+        }
+    }
+    return false;
 }
