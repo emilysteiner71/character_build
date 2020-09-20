@@ -24,5 +24,9 @@ Person::characterBuild Person::getCharacterBuild() const {
     return Person::UNDECLARED;
 }
 
+void Person::getSkillSet(Skills skillSet) {
+    this->skills = skillSet;
+}
+
 Person::~Person() {   
 }

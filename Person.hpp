@@ -2,6 +2,7 @@
 #define PERSON_HPP_
 #include <string>
 #include <vector>
+#include "Skills.hpp"
 
 
 class Person {
@@ -9,6 +10,7 @@ class Person {
         std::string name;
         int age;
         int XP;
+        Skills skills;
         
     public:
         enum characterBuild {THIEF, WARRIOR, MAGE, UNDECLARED};
@@ -17,6 +19,7 @@ class Person {
         int getAge() const;
         int getXP() const;
         virtual characterBuild getCharacterBuild() const;
+        void getSkillSet(Skills skillSet);
         virtual ~Person();
 };
 
