@@ -10,6 +10,9 @@ class Thief: public Person {
         std::string codeName;
 
     public:
-        
+        Thief(const std::string &name, int age);
+        virtual characterBuild getCharacterBuild() const;
+        int getThiefScore() const;
+        virtual ~Thief();
 };
 #endif

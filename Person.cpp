@@ -45,3 +45,10 @@ bool Person::setScore(std::string &attribute, int newScore) {
     }
     return false;
 }
+
+Person::characterBuild Person::getCharacterBuild() const {
+    return Person::UNDECLARED;
+}
+
+Person::~Person() {   
+}
