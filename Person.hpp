@@ -5,7 +5,7 @@
 
 
 class Person {
-    private:
+    protected:
         std::string name;
         int age;
         int XP;
@@ -18,6 +18,7 @@ class Person {
         int getAge() const;
         int getXP() const;
         bool setScore(std::string &attribute, int newScore);
+        int findScore(std::string &attribute) const;
 };
 
 #endif

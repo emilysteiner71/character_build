@@ -1,5 +1,6 @@
 #include "Person.hpp"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -24,12 +25,23 @@ int Person::getXP() const {
     return this->XP;
 }
 
-bool Person::setScore(std::string &attribute, int newScore) {
+int Person::findScore(std::string &attribute) const{
+    int index;
     for (unsigned int i = 0; i < Attributes.size(); i++) {
         if (attribute == Attributes[i]) {
-            Scores[i] = newScore;
-            return true;
+            index = i;
+            return index;
         }
+    }
+    cout << "No attributes of that name" << endl;
+    return -1;
+}
+
+bool Person::setScore(std::string &attribute, int newScore) {
+    int index = this->findScore(attribute);
+    if (index >= 0) {
+        Scores[index] = newScore;
+        return true;
     }
     return false;
 }
