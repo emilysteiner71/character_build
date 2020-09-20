@@ -45,7 +45,7 @@ Skills::Skills(std::vector <std::string> &Attributes, std::vector <int> Scores, 
     this->Scores = Scores;
 }
 
-/*int Skills::findScore(std::string &attribute) const{
+int Skills::findAttributeIndex(std::string &attribute) const{
     int index;
     for (unsigned int i = 0; i < Attributes.size(); i++) {
         if (attribute == Attributes[i]) {
@@ -55,20 +55,14 @@ Skills::Skills(std::vector <std::string> &Attributes, std::vector <int> Scores, 
     }
     cout << "No attributes of that name" << endl;
     return -1;
-}*/
+}
 
-/*bool Skills::setScore(std::string &attribute, int newScore) {
-    int index = this->findScore(attribute);
+bool Skills::setAttributeScore(std::string &attribute, int newScore) {
+    int index = this->findAttributeIndex(attribute);
     if (index >= 0) {
         Scores[index] = newScore;
         return true;
     }
-    return false;
-}*/
-
-
-
-bool Skills::setAttributeScore(std::string &attribute, int newScore) {
     return false;
 }
 

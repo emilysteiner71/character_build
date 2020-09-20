@@ -17,6 +17,7 @@ class Skills {
         Skills(std::vector <std::string> &Attributes, std::vector <std::string> skillTypes);
         Skills(std::vector <std::string> &Attributes, std::vector <int> Scores);
         Skills(std::vector <std::string> &Attributes, std::vector <int> Scores, std::vector <std::string> skillTypes);
+        int findAttributeIndex(std::string &attribute) const;
         bool setAttributeScore(std::string &attribute, int newScore);
         virtual ~Skills();
 };
