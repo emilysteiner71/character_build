@@ -9,8 +9,6 @@ class Person {
         std::string name;
         int age;
         int XP;
-        std::vector <std::string> Attributes;
-        std::vector <int> Scores;
         
     public:
         enum characterBuild {THIEF, WARRIOR, MAGE, UNDECLARED};
@@ -18,8 +16,6 @@ class Person {
         std::string getName() const;
         int getAge() const;
         int getXP() const;
-        bool setScore(std::string &attribute, int newScore);
-        int findScore(std::string &attribute) const;
         virtual characterBuild getCharacterBuild() const;
         virtual ~Person();
 };
