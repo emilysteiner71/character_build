@@ -13,7 +13,6 @@ class Skills {
     public:
         Skills();
         Skills(std::vector <std::string> &Attributes);
-        Skills(std::vector <std::string> &Attributes);
         Skills(std::vector <std::string> &Attributes, std::vector <std::string> skillTypes);
         Skills(std::vector <std::string> &Attributes, std::vector <int> Scores);
         Skills(std::vector <std::string> &Attributes, std::vector <int> Scores, std::vector <std::string> skillTypes);
