@@ -66,5 +66,39 @@ bool Skills::setAttributeScore(std::string &attribute, int newScore) {
     return false;
 }
 
+bool Skills::addAttribute(std::string &attribute) {
+    int index = this->findAttributeIndex(attribute);
+    if (index == -1) {
+        Attributes.push_back(attribute);
+        return true;
+    }
+    return false;
+}
+
+bool Skills::setAttributeType(std::string &attribute, std::string &type) {
+    int index = this->findAttributeIndex(attribute);
+    if (index >= 0) {
+        skillTypes[index] = type;
+        return true;
+    }
+    return false;
+}
+
+int Skills::getSkillScore(std::string &attribute) const {
+    int index = this->findAttributeIndex(attribute);
+    if (index >= 0) {
+        return Scores[index];
+    }
+    return -1;
+}
+
+std::string Skills::getSkillType(std::string &attribute) const {
+    int index = this->findAttributeIndex(attribute);
+    if (index >= 0) {
+        return skillTypes[index];
+    }
+    return NULL;
+}
+
 Skills::~Skills() {
 }
