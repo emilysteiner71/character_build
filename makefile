@@ -1,9 +1,9 @@
 CXX = g++
-CXXFLAGS = -Wall -g
+CXXFLAGS = -Wall -g -std=c++11
 
 all: tracker_test
 
-tracker_test: test.cpp
+tracker_test: *.cpp
 	$(CXX) $(CXXFLAGS) -o tracker_test $^
 
 run: tracker_test

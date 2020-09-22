@@ -6,13 +6,12 @@ using namespace std;
 
 Skills::Skills() {
     //Set default skills
-    Attributes = {"illusion", "conjuration", "destruction", "restoration", "alteration", "enchanting", "smithing", "heavyArmour", "block",
-    "twoHanded", "oneHanded", "archery", "lightArmour", "sneak", "lockpicking", "pickpocket", "speech", "alchemy"};
+    std::vector <std::string> attributeList = { "illusion", "conjuration", "destruction", "restoration", "alteration", "enchanting", "smithing", "heavyArmour", "block","twoHanded", "oneHanded", "archery", "lightArmour", "sneak", "lockpicking", "pickpocket", "speech", "alchemy" };
+    Attributes = attributeList;
     for (unsigned int i = 0; i < Attributes.size(); i++) {
         Scores.push_back(0);
     }
-    skillTypes = {"MAGE", "MAGE", "MAGE", "MAGE", "MAGE", "MAGE", "WARRIOR", "WARRIOR", "WARRIOR", "WARRIOR", "WARRIOR", "WARRIOR", 
-    "THIEF", "THIEF", "THIEF", "THIEF", "THIEF", "THIEF"};
+    skillTypes = { "MAGE", "MAGE", "MAGE", "MAGE", "MAGE", "MAGE", "WARRIOR", "WARRIOR", "WARRIOR", "WARRIOR", "WARRIOR", "WARRIOR", "THIEF", "THIEF", "THIEF", "THIEF", "THIEF", "THIEF" };
 }
 
 Skills::Skills(std::vector <std::string> &Attributes) {
