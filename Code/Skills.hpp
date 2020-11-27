@@ -22,7 +22,7 @@ class Skills {
         bool setAttributeType(std::string &attribute, std::string &type);
         int getSkillScore(std::string &attribute) const;
         std::string getSkillType(std::string &attribute) const;
-        std::vector <std::string*> getTypeSkills(std::string &type) const;
+        std::vector <std::string> getTypeSkills(std::string &skillType) const;
         virtual ~Skills();
 };
 

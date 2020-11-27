@@ -99,5 +99,16 @@ std::string Skills::getSkillType(std::string &attribute) const {
     return NULL;
 }
 
+//To implement
+std::vector <std::string> Skills::getTypeSkills(std::string &skillType) const {
+    std::vector <std::string> typeSkills;
+    for (unsigned int i = 0; i < skillTypes.size(); i++) {
+        if (skillTypes[i] == skillType) {
+            typeSkills.push_back(Attributes[i]);
+        }
+    }
+    return typeSkills;
+}
+
 Skills::~Skills() {
 }

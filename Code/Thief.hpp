@@ -12,6 +12,7 @@ class Thief: public Person {
     public:
         Thief(const std::string &name, int age);
         virtual characterBuild getCharacterBuild() const;
+        void setThiefDefaultScore();
         int getThiefScore() const;
         virtual ~Thief();
 };

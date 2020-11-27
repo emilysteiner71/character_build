@@ -11,8 +11,15 @@ Person::characterBuild Thief::getCharacterBuild() const {
     return Person::THIEF;
 }
 
+//To implement
+void setThiefDefaultScore() {
+
+}
+
+//To implement
 int Thief::getThiefScore() const{
     int thiefScore = 0;
+
     return thiefScore;
 }
 
