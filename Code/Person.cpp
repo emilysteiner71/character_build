@@ -6,6 +6,7 @@ using namespace std;
 
 Person::Person(const std::string &name, int age) : name(name), age(age) {
     XP = 10;
+    this->skills = new Skills();
 }
 
 int Person::getAge() const{
@@ -24,7 +25,7 @@ Person::characterBuild Person::getCharacterBuild() const {
     return Person::UNDECLARED;
 }
 
-void Person::getSkillSet(Skills skillSet) {
+void Person::setSkillSet(Skills* skillSet) {
     this->skills = skillSet;
 }
 
