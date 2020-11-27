@@ -27,6 +27,7 @@ Person::characterBuild Person::getCharacterBuild() const {
 
 void Person::setSkillSet(Skills* skillSet) {
     this->skills = skillSet;
+    cout<< "cool";
 }
 
 Person::~Person() {   
