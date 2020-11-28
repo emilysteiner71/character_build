@@ -12,8 +12,12 @@ Person::characterBuild Thief::getCharacterBuild() const {
 }
 
 //To implement
-void setThiefDefaultScore() {
-
+void Thief::setThiefDefaultScore() {
+    std::string thiefType = "THIEF";
+    std::vector <std::string> thiefSkills = this->skills->getTypeSkills(thiefType);
+    for (unsigned int i = 0; i< thiefSkills.size(); i++) {
+        this->skills->setAttributeScore(thiefSkills[i], 15);
+    }
 }
 
 //To implement

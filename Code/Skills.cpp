@@ -9,7 +9,7 @@ Skills::Skills() {
     std::vector <std::string> attributeList = { "illusion", "conjuration", "destruction", "restoration", "alteration", "enchanting", "smithing", "heavyArmour", "block","twoHanded", "oneHanded", "archery", "lightArmour", "sneak", "lockpicking", "pickpocket", "speech", "alchemy" };
     Attributes = attributeList;
     for (unsigned int i = 0; i < Attributes.size(); i++) {
-        Scores.push_back(0);
+        Scores.push_back(10);
     }
     skillTypes = { "MAGE", "MAGE", "MAGE", "MAGE", "MAGE", "MAGE", "WARRIOR", "WARRIOR", "WARRIOR", "WARRIOR", "WARRIOR", "WARRIOR", "THIEF", "THIEF", "THIEF", "THIEF", "THIEF", "THIEF" };
 }
@@ -17,7 +17,7 @@ Skills::Skills() {
 Skills::Skills(std::vector <std::string> &Attributes) {
     this->Attributes = Attributes;
     for (unsigned int i = 0; i < Attributes.size(); i++) {
-        Scores.push_back(0);
+        Scores.push_back(10);
         skillTypes.push_back("NULL");
     }
 }
@@ -26,7 +26,7 @@ Skills::Skills(std::vector <std::string> &Attributes, std::vector <std::string> 
     this->Attributes = Attributes;
     this->skillTypes = skillTypes;
     for (unsigned int i = 0; i < Attributes.size(); i++) {
-        Scores.push_back(0);
+        Scores.push_back(10);
     }
 }
 
