@@ -13,8 +13,10 @@ using namespace std;
 #include "Skills.hpp"
 
 int main() {
-    Person *Jerry = new Person("Jerry", 19);
+    Thief *Jerry = new Thief("Jerry", 19);
     cout << Jerry->getAge() << endl;
+    Jerry->setThiefDefaultScore();
+    cout << "Jerry has a thief score of " << Jerry->getThiefScore() << endl;
     delete Jerry;
     return 0;
 }
