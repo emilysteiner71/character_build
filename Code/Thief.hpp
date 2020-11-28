@@ -7,12 +7,13 @@
 class Thief: public Person {
     private:
         int thiefScore;
-        std::string codeName;
+        std::string codeName; //to implement
 
     public:
         Thief(const std::string &name, int age);
         virtual characterBuild getCharacterBuild() const;
         void setThiefDefaultScore();
+        void calculateThiefScore();
         int getThiefScore() const;
         virtual ~Thief();
 };

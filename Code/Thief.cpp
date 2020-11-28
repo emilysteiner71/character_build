@@ -5,6 +5,7 @@
 using namespace std;
 
 Thief::Thief(const std::string &name, int age) : Person(name, age) {
+    this->thiefScore = 0;
 }
 
 Person::characterBuild Thief::getCharacterBuild() const {
@@ -17,15 +18,19 @@ void Thief::setThiefDefaultScore() {
     for (unsigned int i = 0; i< thiefSkills.size(); i++) {
         this->skills->setAttributeScore(thiefSkills[i], 15);
     }
+    this->calculateThiefScore();
 }
 
-int Thief::getThiefScore() const{
-    int thiefScore = 0;
+void Thief::calculateThiefScore() {
+    this->thiefScore = 0;
     std::string thiefType = "THIEF";
     std::vector <std::string> thiefSkills = this->skills->getTypeSkills(thiefType);
     for (unsigned int i= 0; i < thiefSkills.size(); i++) {
-        thiefScore += this->skills->getSkillScore(thiefSkills[i]);
+        this->thiefScore += this->skills->getSkillScore(thiefSkills[i]);
     }
+}
+
+int Thief::getThiefScore() const {
     return thiefScore;
 }
 
